@@ -43,6 +43,21 @@ We got the correct answer as 6000, and the time taken was low as well.
 
 ## Assignment 3
 
+It had 2 parts
+
+### Part A
+
+This part was involved creating system calls to get information about currently active processes, much like the ps and top commands in Linux. THe following system calls were implemented-
+- GetNumProc() and GetMaxPid()
+- GetProcInfo()
+- set_burst_time() and get_burst_time()
+
+### Part B
+
+The current scheduler in xv6 is an unweighted round-robin scheduler. In this part, we modify the scheduler to consider user-defined process burst time and implement a shortest job first scheduler.
+
+![image](https://github.com/banerjeepragyan/Operating-Systems-Lab/assets/88557062/56d1ac8e-5fe9-47dd-a8c2-0a930585f4b5)
+
 ## Assignment 4
 
 It had 2 parts.
