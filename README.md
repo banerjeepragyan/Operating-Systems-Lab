@@ -45,4 +45,20 @@ We got the correct answer as 6000, and the time taken was low as well.
 
 ## Assignment 4
 
+It had 2 parts.
+
+### Part A
+
+In this part of the lab, we have implemented the Lazy Memory Allocation for xv6, which is a feature in most modern operating systems. In the case of the original xv6, it makes use of the sbrk() system call, to allocate physical memory and map it to the virtual address space. In the first section, we modified the sbrk() system call to remove the memory allocation and cause a page fault. In the second section, we have modified the trap.c file to resolve this page fault via lazy allocation.
+
+![image](https://github.com/banerjeepragyan/Operating-Systems-Lab/assets/88557062/498169bf-d2da-442d-9ea5-7a388aef1a3a)
+
+### Part B
+
+The create_kernel_process() function was created in proc.c. The kernel process will remain in kernel mode the whole time. Thus, we do not need to initialise its trapframe (trapframes store userspace register values), user space and the user section of its page table. The eip register of the process’ context stores the address of the next instruction. We want the process to start executing at the entry point (which is a function pointer).
+
+Also, we created a process queue that keeps track of the processes that were refused additional memory since there were no free pages available. We created a circular queue struct called rq. And the specific queue that holds processes with swap out requests is rqueue. We have also created the functions corresponding to rq, namely rpush() and rpop(). The queue needs to be accessed with a lock that we have initialised in pinit. We have also initialised the initial values of s and e to zero in Userinit. Since the queue and the functions relating to it are needed in other files too, we added prototypes in defs.h too.
+
+![image](https://github.com/banerjeepragyan/Operating-Systems-Lab/assets/88557062/ae7d2e7d-941f-4d56-8499-3e31ffb02fa8)
+
 ## Assignment 5
