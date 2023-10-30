@@ -77,3 +77,24 @@ Also, we created a process queue that keeps track of the processes that were ref
 ![image](https://github.com/banerjeepragyan/Operating-Systems-Lab/assets/88557062/ae7d2e7d-941f-4d56-8499-3e31ffb02fa8)
 
 ## Assignment 5
+
+In this assignment, we quantitatively compare and quantify the advantages of the various new features in ext and ZFS file systems.
+
+| Feature| PresentAbsent in ZFS| Present/Absent in ext4|
+|--------|---------------------|-----------------------|
+| Deduplication| Present| Absent|
+| Compression| Present| Absent|
+| Checksum| Present| Absent|
+| Internal Snapshotting/Branching| Present| Absent
+| Persistent Cache| Present| Absent|
+| Encryption| Present| Present|
+| Block Journaling| Present| Present|
+| Copy-on-write| Present| Absent|
+
+Comparison of deduplication
+
+![image](https://github.com/banerjeepragyan/Operating-Systems-Lab/assets/88557062/7fd98e6c-0093-4f00-8a53-5571dc8e7fa6)
+
+Comparison of compression
+
+![image](https://github.com/banerjeepragyan/Operating-Systems-Lab/assets/88557062/0a2a06fc-60a7-4d69-a180-b7593e9abfc4)
